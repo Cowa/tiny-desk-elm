@@ -1,0 +1,24 @@
+.header {
+  width: 100%;
+  height: 52px;
+  background-color: #766A5C;
+  border-bottom: 3px solid #5A5043;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 2em;
+  margin-top: 8px;
+  margin-left: 15px;
+  cursor: pointer;
+  color: white;
+}
+
+.logout {
+  font-size: 1.5em;
+  color: rgb(173, 161, 143);
+  right: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 14px;
+}

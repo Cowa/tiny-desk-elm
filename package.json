@@ -1,0 +1,17 @@
+{
+  "name": "tinydesk-gulp-build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "gulp build"
+  },
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.6.0",
+    "gulp-elm": "*",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglifyjs": "^0.5.0"
+  }
+}

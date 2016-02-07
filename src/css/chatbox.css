@@ -1,0 +1,64 @@
+.chatbox {
+  width: 570px;
+  height: 400px;
+  background-color: beige;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  box-shadow: 1px 1px 10px #555;
+}
+
+.chatbox-header {
+  height: 25px;
+  background-color: #766A5C;
+}
+
+.chatbox-header .close {
+  position: relative;
+  left: 550px;
+  color: rgb(173, 161, 143);
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.chatbox-header .reduce {
+  position: relative;
+  left: 515px;
+  color: rgb(173, 161, 143);
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.chatbox-history {
+  margin: 5px;
+  width: 380px;
+  height: 300px;
+}
+
+.chatbox-messageEntry {
+  margin: 5px;
+}
+
+.chatbox-comboseBox {
+  background-color: #E5E5E5;
+  border-radius: 3px;
+  background-color: #E5E5E5;
+  border-radius: 3px;
+  width: 380px;
+  height: 47px;
+  margin-left: 10px;
+}
+
+.chatbox.hidden {
+  bottom: -375px;
+}
+
+.chatbox-sendmessage {
+  width: 142px;
+  margin-left: 10px;
+  height: 57px;
+  vertical-align: bottom;
+}

@@ -1,0 +1,29 @@
+.pickinglist {
+  background-color: #473F37;
+  color: white;
+  width: 250px;
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  overflow: scroll;
+}
+
+.pickinglist-header {
+  height: 25px;
+  position: fixed;
+  background-color: #473F37;
+  width: 250px;
+}
+
+.pickinglist-header button {
+  float: right;
+}
+
+.pickinglist.hidden {
+  display: none;
+}
+
+.pickinglist-entry img {
+  width: 245px;
+  height: 130px;
+}

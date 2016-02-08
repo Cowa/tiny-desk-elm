@@ -7,7 +7,6 @@ import Header
 import Background
 import Conversation
 import Chatbox
-import PickingList
 
 
 --
@@ -15,14 +14,13 @@ import PickingList
 
 
 type alias Model =
-  { activeChatbox : Maybe Chatbox.Model
-  , pickingList : PickingList.Model }
+  { activeChatbox : Maybe Chatbox.Model }
 
 
 init : ( Model, Effects Action )
 init =
-  ( { activeChatbox = Just Chatbox.init, pickingList = PickingList.init }
-  , Effects.map PickingList PickingList.fetchCats
+  ( { activeChatbox = Just Chatbox.init }
+  , Effects.none
   )
 
 
@@ -33,7 +31,6 @@ init =
 
 type Action
   = ActiveChatbox Chatbox.Action
-  | PickingList PickingList.Action
   | NoOp
 
 
@@ -64,13 +61,6 @@ update action model =
       in
         ( { model | activeChatbox = activeConv }, Effects.map ActiveChatbox fx )
 
-    PickingList action' ->
-      let
-        (newPickingList, fx) = PickingList.update action' model.pickingList
-      in
-        ( { model | pickingList = newPickingList }, Effects.map PickingList fx )
-
-
 --
 --
 
@@ -85,12 +75,10 @@ view address model =
 
         Nothing ->
           div [] []
-    pickingListAddress = Signal.forwardTo address PickingList
   in
     div
       []
-      [ Header.view pickingListAddress
+      [ Header.view
       , chatboxView
       , Background.view
-      , PickingList.view pickingListAddress model.pickingList
       ]

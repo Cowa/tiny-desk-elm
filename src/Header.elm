@@ -5,14 +5,16 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Effects exposing (Effects)
 
-view : Html
-view =
+import PickingList
+
+view : Signal.Address PickingList.Action -> Html
+view address =
   div
     [ class "header" ]
     [ span
-        [ class "logo" ]
-        [ i [ class "fa fa-anchor" ] [] ]
+      [ class "logo", onClick address PickingList.Toggle ]
+      [ i [ class "fa fa-anchor" ] [] ]
     , span
-        [ class "logout" ]
-        [ i [ class "fa fa-power-off" ] [] ]
+      [ class "logout" ]
+      [ i [ class "fa fa-power-off" ] [] ]
     ]

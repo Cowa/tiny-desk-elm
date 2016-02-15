@@ -27,3 +27,9 @@
   width: 245px;
   height: 130px;
 }
+
+.pickinglist-error {
+  color: red;
+  position: absolute;
+  top: 25px;
+}
